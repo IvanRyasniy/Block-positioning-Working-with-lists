@@ -7,14 +7,14 @@ body {
 }
 
 #some_block {
-  background: red;
+  background: green;
   color: #fff;
   text-align: center;
   width: 50px;
   height: 50px;
   line-height: 50px;
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   left: 20px;
   top: 10px;
 }
@@ -31,6 +31,36 @@ body {
   margin-bottom: 50px;
   float: left;
 }
+
+#nav {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#nav li {
+  display: inline;
+  background: #fafafa;
+  border: 1px solid silver;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+#nav li:hover {
+  color: #fff;
+  background: #333;
+  border-radius: 5px;
+  border-color: #333;
+}
+
+#nav li:not(:last-of-type) {
+  margin-right: 20px;
+}
+
 #main {
   width: 50%;
   margin-left: 10%;
@@ -38,6 +68,8 @@ body {
   border: 1px solid silver;
   padding: 20px 2.5%;
   float: left;
+  position: relative;
+  z-index: 1;
 }
 
 #aside {
@@ -49,7 +81,9 @@ body {
   margin-left: 5%;
   position: relative;
   bottom: -10px;
-  left: -200px;
+  left: -150px;
+  position: relative;
+  z-index: 0;
 }
 
 #footer {
